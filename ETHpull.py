@@ -14,6 +14,7 @@ API = ""
 
 #ETH doesn't require Contract specification
 #range to max value, or edit for specific addresses
+startTime = datetime.now()
 for i in range(20):
     try:
         Address = df['pub'].iloc[i]
@@ -29,3 +30,5 @@ for i in range(20):
     
 #sace to CSV    
 df.to_csv('tracked_addresses', index=False)
+#print operation duration
+print(datetime.now() - startTime)
