@@ -32,6 +32,6 @@ for i in range(20):
     except: print('parsing error')    
     
 #save to CSV    
-df.to_csv('tracked_addresses', index=False)
+df.to_csv('tracked_addresses.csv', index=False)
 #print operation duration
 print(datetime.now() - startTime)
