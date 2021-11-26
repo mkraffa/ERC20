@@ -5,6 +5,7 @@ import numpy as np
 import webbrowser
 import requests, bs4
 import json
+from datetime import datetime
 from urllib.request import Request, urlopen
 
 #see CSV template and fill accordingly
@@ -13,6 +14,7 @@ df = pd.read_csv('tracked_addresses.csv')
 #get your API key here: https://etherscan.io/apis
 API = ""
 
+startTime = datetime.now()
 #range to max value, or edit for specific addresses
 #HEDG
 for i in range(20):
@@ -31,3 +33,5 @@ for i in range(20):
     
 #save to CSV    
 df.to_csv('tracked_addresses', index=False)
+#print operation duration
+print(datetime.now() - startTime)
