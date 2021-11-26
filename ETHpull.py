@@ -4,6 +4,7 @@ import numpy as np
 import webbrowser
 import requests, bs4
 import json
+from datetime import datetime
 from urllib.request import Request, urlopen
 
 #see CSV template and fill accordingly
